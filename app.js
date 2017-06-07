@@ -10,8 +10,8 @@ var router = express.Router();
 var app = express();
 
 var http = require('http');
-var hostname = 'localhost';
-var port = 3000;
+//var hostname = 'localhost';
+var port = process.env.PORT || 8080;
 
 //====================================================================\\
 const compileMain = pug.compileFile(__dirname + '/public/static/html/index.pug');
@@ -46,6 +46,6 @@ const server = http.createServer((req, res) => {
 });
 
 app.listen(port, hostname, () =>{
-    console.log(`Server running at http://${hostname}:${port}/`);
+    //console.log(`Server running at http://${hostname}:${port}/`);
 });
 //====================================================================\\

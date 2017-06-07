@@ -1,0 +1,49 @@
+<!--<section class="element_container" flexelement>
+    <table class="scroll-x">               
+        <tr>                          
+            <th class="no_offset w3-animate-right">
+                <div class="url_container">
+                    <div id="url_1" class="element_icon icon_alignment"></div>  
+                    <span class="element_description">Innovative</span>
+                </div>
+
+                <span class="element_text">
+                    {{placeHolder}}
+                </span>
+            </th>
+
+            <th class="no_offset w3-animate-right">    
+                <div class="url_container">
+                    <div id="url_2" class="element_icon icon_alignment"></div>              
+                    <span class="element_description">Clean Code</span>
+                </div>
+
+                <span class="element_text">
+                    {{placeHolder}}
+                </span>
+            </th>
+
+            <th class="no_offset w3-animate-right">    
+                <div class="url_container">
+                    <div id="url_3" class="element_icon icon_alignment"></div>              
+                    <span class="element_description">Great Service</span>
+                </div>
+
+                <span class="element_text">
+                    {{placeHolder}}
+                </span>
+            </th>
+
+            <th class="no_offset w3-animate-right">    
+                <div class="url_container">
+                    <div id="url_4" class="element_icon icon_alignment"></div>              
+                    <span class="element_description">Using the latest techniques</span>
+                </div>
+
+                <span class="element_text">
+                    {{placeHolder}}
+                </span>
+            </th>
+        </tr>
+    </table>
+</section>-->  

@@ -1,0 +1,203 @@
+<main ng-controller="home_controller">
+    <h2 class="{{title_model_class}}" ng-model="title"> 
+        <span class="p1" >What we</span> <span class="p2">stand for</span> 
+    </h2>
+
+    <showcase class="element_container"></showcase>
+    
+    <section class="banner bg-layer offset" banner-dir></section>
+    
+    <section class="sc_3 offset" ng-controller="expand_2bottom">
+        <h2 class="{{title_model_class}}" ng-model="title"> 
+            <span class="p1">What we</span> <span class="p2">work with</span> 
+        </h2>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(2)" ng-mouseleave="Close(2)" class="bg_mean ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(5)" ng-mouseleave="Close(5)" class="bg_wp ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(8)" ng-mouseleave="Close(8)" class="bg_wshop ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(11)" ng-mouseleave="Close(11)" class="bg_node ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(14)" ng-mouseleave="Close(14)" class="bg_angular ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+        
+        <div class="layer_a">
+            <div ng-mouseover="Expand(17)" ng-mouseleave="Close(17)" class="bg_mongo ms hover"></div>
+            <div class="layer_b">
+                <span class="align_"> {{shorty}} </span>
+            </div>
+        </div>
+    </section>
+    
+    <!--PI = PORTFOLIO ITEM-->
+    <section class="portfolio_items offset" style="margin-top: 80px !important;"> 
+        <div id="triangle_bottom_right" class="triangle_pos_right pi_custom_triangle"></div>
+    
+        <h2 class="{{title_model_class}}" ng-model="title"> 
+            <span class="p1">Who we</span> <span class="p2">worked with</span> 
+        </h2>
+    
+        <div class="pi_container left"> <!--can add pi_bg to class-->
+            <div class="pi_title_parent">
+                <span class="pi_title">Pand 33 Snuffelschuur</span>
+            </div>
+            
+            <div class="pi_layer_a" ng-controller="portfolio_hover">
+                <div class="pi_name_parent pi_style">
+                    <div ng-mouseover="exp(1)" ng-mouseleave="cls(1)" class="pi_table">
+                        <div class="pi_inner_banner_1 pi_banner_style"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pi_container right"> <!--can add pi_bg to class-->
+            <div class="pi_title_parent">
+                <span class="pi_title">Peoples Brand</span>
+            </div>
+            
+            <div class="pi_layer_a" ng-controller="portfolio_hover">
+                <div class="pi_name_parent pi_style">
+                    <div ng-mouseover="exp(3)" ng-mouseleave="cls(3)" class="pi_table">
+                        <div class="pi_inner_banner_3 pi_banner_style"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper-absolute" class="xl-indicator" csbutton></div>
+    </section>
+    
+    <feedback class="fb-container"></feedback>
+    
+    <!--WW = WORLD WIDE-->
+    <section class="ww-section">
+        <div class="dome-layer dome-cover"></div>
+        
+        <div class="ww-table-centering">
+            <div class="ww-center">
+                <div class="ww-top">
+                    <div> <h2 class="ww-top-title uppercase">showcase your assets</h2></div>
+                    <div> 
+                        <h1 class="ww-main-title">Serving Clients Worldwide</h1> 
+                        <div class="small-ul-decoration"></div>
+                    </div>
+                </div>
+
+                <div class="ww-explain">
+                    <div class="ww-explain-container">
+                        <h3 class="ww-explain-txt">{{shorty}}</h3> 
+                    </div>
+                </div>
+
+                <div class="ww-container">
+                    <div class="ww-wrapper xl-indicator" csbutton></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="metrics">
+        <div class="ww-top black_">
+            <div> <h2 class="ww-top-title uppercase">counter styling</h2></div>
+            <div> 
+                <h1 class="ww-main-title">Metrics that matter</h1> 
+                <div class="small-ul-decoration"></div>
+            </div>
+        </div>
+        
+        <section class="metric-box-align">
+            <div class="metric-box">
+                <div class="metric-title-wrapper"> 
+                    <h1 class="metrics-title">Trustworthy</h1>
+                    <div class="small-ul-decoration black_"></div>
+                </div>
+                <div class="metrics_counter">
+                    <span class="metrics-x">84</span>
+                    <span class="metrics-x-final">active clients</span>
+                </div>
+            </div>
+
+            <div class="metric-box">
+                <div class="metric-title-wrapper"> 
+                    <h1 class="metrics-title">Efficient</h1>
+                    <div class="small-ul-decoration black_"></div>
+                </div>
+                <div class="metrics_counter">
+                    <span class="metrics-x">862</span>
+                    <span class="metrics-x-final">websites built</span>
+                </div>
+            </div>
+
+            <div class="metric-box">
+                <div class="metric-title-wrapper"> 
+                    <h1 class="metrics-title">Caffeinated</h1>
+                    <div class="small-ul-decoration black_"></div>
+                </div>
+                <div class="metrics_counter">
+                    <span class="metrics-x">13.557</span>
+                    <span class="metrics-x-final">coffee cups</span>
+                </div>
+            </div>
+    </section>
+    
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-top">
+                <div class="metric-box">
+                    <div class="metric-title-wrapper"> 
+                        <span class="metrics-title contact-small">contact us</span>
+                    </div>
+                    <div class="metrics_counter">
+                        <h1 class="metrics-x contact-medium">Global Company</h1>
+                        <div class="small-ul-decoration black_"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div class="contact-twitter-box w3-animate-left">
+                    <div class="contact-twitter-img"></div>
+                    <span class="contact-twitter-name">@youtwitter</span>
+                </div>
+            </div>
+            
+            <div class="contact-box">
+                <div class="contact-phone-box w3-animate-left">
+                    <div class="contact-phone-img"></div>
+                    <span class="contact-phone">06 85904376</span>
+                </div>
+            </div>
+            
+            <div class="contact-box contact-social">
+                <a href="#"><div class="social linkedin"></div></a>
+                <a href="#"><div class="social google_p"></div></a>
+            </div>
+        </div>
+    </section>
+    
+    <div id="scroll_anchor"></div>

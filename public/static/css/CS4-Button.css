@@ -1,0 +1,14 @@
+BUTTON.cs4-button {
+  background-color: #d86c56;
+  color: #fff;
+  padding: 10px;
+  width: auto;
+  border: none;
+}
+BUTTON.cs4-button:hover {
+  border: 1px solid #fff;
+}
+BUTTON.cs4-XL {
+  width: 180px;
+  height: 50px;
+}

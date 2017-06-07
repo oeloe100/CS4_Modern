@@ -1,0 +1,105 @@
+app.directive("directive", function($compile){
+    var offset = 35;
+    var temp = '<div></div>';
+    
+    return {
+        restrict : 'AEC',
+        template : temp,
+        scope    : {
+            active : '=?bind'
+        },
+        link : function($scope, $element){      
+            $scope.SB = function(){
+                $scope.active = !$scope.active;
+                $scope.$emit('directive.SB', $scope.active);
+            };
+            
+            var el = $element.find('div');            
+            var new_attr = "\
+                <button bind='SB()' ng-click='SB()' class='main_button_decoration'>\
+                    <span> Next </span>\
+                </button>";
+            var appender = $compile(new_attr)($scope);
+            el.append(appender);
+            
+            
+            el.css({
+                height : 'auto',
+                display: 'block',
+                margin : '0 auto',
+                cursor : 'pointer',
+                width  : '110px'
+            });
+        }
+    }
+});
+
+app.directive("feedback", function($compile){
+    var temp = '<div class="fb-wrapper"></div>';
+    
+    return {
+        restrict : 'AEC',
+        template : temp,
+        scope    : {
+            active   : '=?bind'
+        },
+        link : function($scope, $element){ 
+            var comment = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,sem. Nulla consequat massa quis enim.'
+            
+            $scope.ssection = section;
+            
+            var section = '\
+                <section ng-controller="feedback-controller">\
+                    <div class="fb-comment-wrapper">\
+                        <span> <q><em> '+comment+' </em></q> </span>\
+                    </div>\
+                    <div class="fb-bottom">\
+                        <cite>-Somebody famous</cite>\
+                    </div>\
+                </section>';
+            
+            var el = $element.find('div');
+            var appender = $compile(section)($scope);
+            el.append(appender);
+        }        
+    }
+});
+
+var comment_block = $element.find('em');
+var inner_html = angular.element(comment_block);
+console.log(inner_html[0].textContent);
+
+elx = th_element[x];
+var el_element = angular.element(elx);
+el_element.addClass('not_active');
+
+for (var i = 0; i < th_count; i++){
+    var indicator = element.find('a')[i];
+    var editable_indicator = angular.element(indicator);
+    var indicator_class = editable_indicator.attr('class')
+    var seperated_indic_class = indicator_class.split(" ");
+    var indicator_id = seperated_indic_class[1].split("_");
+    console.log(indicator_id[1]);
+}
+
+for(var x = 0; x <th_element.length; x++){
+    if (x > 2){
+        last_elements.push(th_element[x]);
+    }
+}
+
+for (var z = 0; z < last_elements.length; z++){
+    var not_active = angular.element(last_elements[z]).addClass('not_active');
+}
+
+for (var i = 0; i < 2; i++){
+    el.css('width', i * offset + 'px');
+    var new_attr = "<a class='indicator el_"+i+"' bind='SB()' ng-click='SB()'></a>";
+    var appender = $compile(new_attr)($scope);
+    el.append(appender);
+}
+
+
+app.controller('feedback-controller', function($scope, $element){
+    
+});

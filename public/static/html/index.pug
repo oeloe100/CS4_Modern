@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel='stylesheet', href='/static/css/header.css'>
+    <link rel='stylesheet', href='/static/css/home.css'>
+    <link rel='stylesheet', href='/static/css/home_resp.css'>
+    <link rel='stylesheet', href='/static/css/CS4-Button.css'>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nunito" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <body ng-app="Modern_Template" ng-controller="scroll_controller">
+        <header class="header_img" ng-controller="header_controller">
+            <div class="filter"></div>
+            
+            <!-----------BANNER------------>
+            <div class="header_banner">
+                <span ng-model="banner_info" class="banner_info"> {{banner_info}} </span>
+                <div id="wrapper" csbutton></div>
+            </div>
+            
+            <!-----------HEADER BOTTOM DECORATION------------>
+            <div id="triangle_bottom_left"  class="triangle_pos_left"></div>
+            <div id="triangle_bottom_right" class="triangle_pos_right"></div>
+            
+            <!-----------HEADER LOGO------------>
+            <a style="cursor: pointer;" href="#/">
+                <img src="/static/img/logo.png" class="header_logo">
+            </a>
+            
+            <div class="nav_container open_animation">                
+                <!-----------MOBILE------------>             
+                
+                <a ng-click="open_nav()" ng-if="isResponsive">
+                    <div class="placement nav_pos_1 underline nav_button"> 
+                        <span ng-model="nav_innerText" class="navText"> ☰ </span>
+                    </div> 
+                </a>
+                
+                <a ng-if="isNative" ng-if="isResponsive" href="#/">
+                    <div class="placement nav_pos_3 underline nav_button"> 
+                        <span class="navText"> Home </span> 
+                    </div> 
+                </a>  
+                
+                <a ng-if="isNative" ng-if="isResponsive" href="#!/about">
+                    <div class="placement nav_pos_2 underline nav_button"> 
+                        <span class="navText"> #{about} </span> 
+                    </div> 
+                </a>  
+
+                <a ng-if="isNative" ng-if="isResponsive">
+                    <div class="placement nav_pos_3 underline nav_button"> 
+                        <span class="navText"> #{blog} </span> 
+                    </div> 
+                </a> 
+                
+                <!---------NOT MOBILE---------->             
+                
+                <a ng-if="!isResponsive" href="#/">
+                    <div class="placement nav_pos_1 underline nav_button"> 
+                        <span ng-model="nav_innerText" class="navText"> Home </span> 
+                    </div> 
+                </a>
+                
+                <a ng-if="!isResponsive" href="#!/about">
+                    <div class="placement nav_pos_2 underline nav_button"> 
+                        <span class="navText"> #{about} </span> 
+                    </div> 
+                </a>  
+
+                <a ng-if="!isResponsive">
+                    <div class="placement nav_pos_3 underline nav_button"> 
+                        <span class="navText"> #{blog} </span> 
+                    </div> 
+                </a> 
+            </div>
+            
+            <!-----------SCROLLER------------>
+            <button ng-click="setScroller()" class="scroll_align scroll_looks">&#8675;</button>
+        </header>
+        
+        <!-----------PAGE CONTENT------------>
+        <div ng-view class="content"></div>
+        
+        <footer>
+            <div class="footer_top">
+                <span class="footer_oneliner">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.</span>
+            </div>
+            
+            <div class="center_banner">
+                <div class="wrapper">
+                    <div class="info_block">
+                        <span id="title_" class="no_underline">Services/Products</span>
+                        <div class="inner_container">
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Meanstack</meanstack>
+                            </span>
+
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Meanstack in WP</meanstack>
+                            </span>
+
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Wordpress</meanstack>
+                            </span>
+
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Webshop</meanstack>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info_block">
+                        <span id="title_" class="no_underline">Prices</span>
+                        <div class="inner_container">
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Basic/Meanstack </meanstack>
+                            </span>
+
+                            <span class="inline_b w3-animate-left">
+                                <span class="fnt_s_footer">&#x21e2;</span>  
+                                <meanstack> Wordpress </meanstack>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom_banner">
+                <div class="contact">
+                    <span id="title_" class="align_center">Contact</span>
+                    <span class="contact_info street">Groningerweg 33</span>
+                    <span class="contact_info adress">9738AB Groningen</span>
+                    <span class="contact_info email" >tonraschenko@hotmail.com</span>
+                    <span class="contact_info moile" >06 46194923</span>
+                </div>
+                
+                <div class="follow">
+                    <span id="title_" class="align_center">Follow</span>
+                    <a href="#"><div class="social facebook"></div></a>
+                    <a href="#"><div class="social linkedin"></div></a>
+                    <a href="#"><div class="social google_p"></div></a>
+                </div>
+            </div>
+            
+            <div class="bottom_bar bb-text-style">© 2017 - ARashchenko Webdesign</div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/controller.js"></script>
+    </body>

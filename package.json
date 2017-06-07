@@ -1,0 +1,23 @@
+{
+  "name": "soft-web",
+  "version": "0.1.0",
+  "description": "sample web construction using node.js as core engine",
+  "main": "app.js",
+  "scripts": {
+    "test": "Test Command"
+  },
+  "keywords": [
+    "web",
+    "construction",
+    "node.js",
+    "engine",
+    "front/backend"
+  ],
+  "author": "Anton Rashchenko",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "pug": "^2.0.0-rc.1",
+    "stylus": "^0.54.5"
+  }
+}

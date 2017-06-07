@@ -1,0 +1,501 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+//---------------------BODY---------------------\\
+
+.active
+    display: auto;
+    
+.not_active
+    display: none;
+
+.welcome_center, H1.about_title
+    display: block;
+    width: auto;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    padding: 20px;
+    color: #d86c56;
+    
+.element_container
+    display: block;
+    width: 700px;
+    margin: 20px auto;
+    
+TABLE.scroll-x
+    overflow-x: scroll;
+    
+DIV.key_elements
+    display: inline-block;
+    width: 250px;
+    margin: 53px;
+    
+DIV.url_container
+    padding: 20px;
+    
+#url_1
+    background-image: url("/static/img/idea_icon.png");
+    
+#url_2
+    background-image: url("/static/img/code_icon.png");
+    
+#url_3
+    background-image: url("/static/img/24h_service.png");
+    
+#url_4
+    background-image: url("/static/img/latest_tech.png");
+    
+DIV.element_icon
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+DIV.icon_alignment
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    
+    
+SPAN.element_description
+    font-weight: bold;
+    color: #d86c56;
+    
+TH.no_offset
+    width: 350px;
+    
+TABLE
+    display: block;
+    margin: 0 auto;
+    
+.indicator
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 2px;
+    
+.selected_indicator
+    background-color: black;
+    
+//------------------SECTION 2---------------------\\
+
+.bg-layer  
+    background-image: url("/static/img/banner_icon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+SECTION.banner
+    //background-attachment: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+        
+.bg_opacity
+    -khtml-opacity: .60;
+    -moz-opacity: .60;
+    opacity: .60;
+    background-color: black;
+    
+.banner_outer
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    
+.banner_middle
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    
+.banner_text
+    font-size: 22px;
+    padding: 20px;
+    color: white;
+    display: block;
+
+//------------------SECTION 3------------------\\
+
+.p1, .p2
+    font-family: 'Nunito', sans-serif;
+
+.p1
+    margin: 0px;
+    font-size: 38px;
+    height: 40px;
+    
+.p2
+    margin: 0px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #3d4154;
+
+SECTION.sc_3
+    margin: 20px;
+  
+.layer_a
+    display: inline-block;
+    width: 320px;
+    
+DIV.ms
+    width: 110px;
+    height: 120px;
+    display: block;
+    margin: 20px auto;
+    
+SPAN.align_
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #9b9b9b;
+    
+.layer_b
+    height: 0px;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    overflow: hidden;
+    
+.layer_b_expanded
+    height: 75px !important;
+    
+.hover
+    cursor: pointer;
+    
+DIV.bg_mean
+    background-image: url(/static/img/mean_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+DIV.bg_wp
+    background-image: url(/static/img/wordpress.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 160px !important;
+    height: 160px !important;
+    
+DIV.bg_wshop
+    background-image: url(/static/img/webshop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px !important;
+    height: 130px !important;
+    
+DIV.bg_node
+    background-image: url(/static/img/nodejs_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+DIV.bg_angular
+    background-image: url(/static/img/angular.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+DIV.bg_mongo
+    background-image: url(/static/img/mongo_db.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+//--------------PORTFOLIO SECTION----------------\\
+
+SECTION.portfolio_items
+    width: 100%;
+    height: 520px;
+    background-color: #a5efb6;
+    position: relative;
+    
+DIV.pi_custom_triangle
+    bottom: 170px;
+    left: 350px;
+    border-bottom: 800px solid #a5efb6 !important;
+
+DIV.pi_bg
+    background-image: url("/static/img/banner_products.png");
+    background-repeat: no-repeat;
+    background-size: inherit;
+    
+DIV.pi_container
+    display: table;
+    position: absolute;
+    width: 50%;
+    height: 400px;
+
+DIV.pi_title_parent
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    
+SPAN.pi_title
+    display: block;
+    padding: 10px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: font-size 1.3s;
+    color: #d86c56;
+    
+SPAN.pi_title:hover
+    font-size: 20px;
+    
+DIV.pi_layer_a
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    
+DIV.pi_name_parent
+    width: 250px;
+    height: 230px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;    
+    
+DIV.pi_style
+    background-image: url("/static/img/macbook_ico.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+DIV.pi_table
+    display: table;
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    
+SPAN.pi_name
+    display: table-cell;
+    vertical-align: middle;
+    color: cyan;
+    
+DIV.pi_inner_banner_1
+    background-image: url("http://antonrashchenko.nl/p33_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+DIV.pi_inner_banner_2
+    background-image: url("http://antonrashchenko.nl/p33_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+DIV.pi_inner_banner_3
+    background-image: url("http://antonrashchenko.nl/PB_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+DIV.pi_inner_banner_4
+    background-image: url("http://antonrashchenko.nl/PB_6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+DIV.pi_banner_style
+    display: inline-block;
+    width: 230px;
+    height: 133px;
+    margin-top: 30px;
+
+.left
+    left: 0px;
+    
+.right
+    right: 0px;
+    
+//--------------- WORLD WIDE WW SECTION ------------------\\
+
+SECTION.ww-section
+    background-image: url("/static/img/world_wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center center;
+    height: 500px;
+    margin-bottom: 40px;
+    position: relative;
+    
+DIV.dome-layer
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+DIV.dome-cover
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    background-color: #000;
+    
+.ww-table-centering
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+.ww-center
+    display: table-cell;
+    vertical-align: middle;
+
+DIV.ww-top, DIV.ww-explain, DIV.ww-container
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: white;
+    
+.uppercase
+    text-transform: uppercase;
+    
+.ww-top-title, .ww-main-title, .ww-explain-txt
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+    
+.ww-explain-container, .ww-wrapper
+    padding: 10px;
+    
+.ww-wrapper
+    margin: 10px;
+    
+.ww-top-title
+    font-size: 17px;
+    
+.ww-main-title
+    font-size: 32px;
+    font-weight: bold;
+    
+.ww-explain-txt
+    font-size: 19px;
+    
+    
+//--------------------------METRICS----------------------------\\
+
+.black_
+    color: black !important;
+    
+SECTION.metrics
+    margin: 80px 0 80px 0;
+    
+.metric-box
+    margin-top: 40px;
+    padding: 20px;
+    width: 314px;
+    display: inline-block;
+    
+.metrics-title
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    
+.metrics-counter
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    
+SPAN.metrics-x, SPAN.metrics-x-final
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    
+.metrics-x
+    font-size: 50px;
+    color: #d86c56;
+    
+SPAN.metrics-x-final
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    
+SECTION.metric-box-align
+    width: 952px;
+    margin: 0 auto;
+    
+//--------------------------CONTACT--------------------------\\
+
+SECTION.contact
+    border-top: 1px solid #e8e8e8;
+
+DIV.contact-container
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+.contact-small
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    
+.contact-medium
+    font-size: 30px;
+    font-weight: bold;
+    
+.contact-twitter-img
+    background-image: url("/static/img/twitter.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+.contact-box
+    width: 180px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    
+.contact-twitter-img, .contact-phone-img
+    background-image: url(/static/img/twitter.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    
+.contact-phone-img
+    background-image: url(/static/img/phone.ico) !important;
+    
+.contact-twitter-name, .contact-phone
+    font-weight: bold;
+    font-size: 14px;
+    float: left;
+    
+DIV.contact-social
+    width: 120px;
+    
+//-----------------------FEEDBACK----------------------------\\
+
+.fb-container
+    background-color: #104870;
+    display: inline-block;
+    margin-bottom: 40px;
+    width: 100%;
+    
+.fb-wrapper
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+.fb-comment-wrapper
+    padding: 20px;
+    
+.fb-bottom
+    color: darkgray;
+    font-size: 14px;
+    
+    

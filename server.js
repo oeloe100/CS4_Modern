@@ -11,6 +11,7 @@ var app = express();
 
 var http = require('http');
 //var hostname = 'localhost';
+//var port = 3000;
 var port = process.env.PORT || 8080;
 
 //====================================================================\\
@@ -45,7 +46,7 @@ const server = http.createServer((req, res) => {
     res.end('');
 });
 
-app.listen(port, hostname, () =>{
+//app.listen(port, hostname, () =>{
     //console.log(`Server running at http://${hostname}:${port}/`);
-});
+//});
 //====================================================================\\

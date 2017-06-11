@@ -1,11 +1,12 @@
 <main ng-controller="home_controller">
-    <h2 class="{{title_model_class}}" ng-model="title"> 
-        <span class="p1" >What we</span> <span class="p2">stand for</span> 
-    </h2>
-
-    <showcase class="element_container"></showcase>
+    <section>
+        <h2 class="{{title_model_class}}" ng-model="title"> 
+            <span class="p1">What</span> <span class="p2">matters!</span> 
+        </h2>
+        <showcase class="element_container"></showcase>
+    </section>
     
-    <section class="banner bg-layer offset" banner-dir></section>
+    <section ng-controller="banner_controller" class="banner bg-layer offset"></section>
     
     <section class="sc_3 offset" ng-controller="expand_2bottom">
         <h2 class="{{title_model_class}}" ng-model="title"> 
@@ -93,7 +94,13 @@
         <div id="wrapper-absolute" class="xl-indicator" csbutton></div>
     </section>
     
-    <feedback class="fb-container"></feedback>
+    <section class="fb-container">
+        <h2 class="{{title_model_class}}" ng-model="title"> 
+            <span style="color:white;" class="p1">Some</span> 
+            <span style="color:#3dff84;" class="p2">feedback</span> 
+        </h2>
+        <feedback></feedback>
+    </section>
     
     <!--WW = WORLD WIDE-->
     <section class="ww-section">

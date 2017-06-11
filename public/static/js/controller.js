@@ -3,6 +3,8 @@ function HeaderController($scope){
     $scope.banner_info = header_bInfo;
 }
 
+//------------------------------------SCROLL DOWN (IN PROGRESS)--------------------------------------\\
+
 function ScrollController($scope, $location, $anchorScroll){
     $scope.setScroller = function(){
         $location.hash('scroll_anchor');
@@ -10,18 +12,22 @@ function ScrollController($scope, $location, $anchorScroll){
     }
 }
 
+//-----------------------------------------ABOUT CONTROLLER------------------------------------------\\
+
 function AboutController($scope){
     $scope.title = "About"
     $scope.about_welcome_class = "about_title"
 }
 
+//-----------------------------------------HOME CONTROLLER-------------------------------------------\\
+
 function HomeController($scope){
     $scope.placeHolder = pc;
-    
     $scope.shorty = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.";
-    
     $scope.title_model_class = 'welcome_center';
 }
+
+//---------------------------------SWITCH MOBILE/TABLET > DESKTOP------------------------------------\\
 
 function SetResponsiveWindow($window, $rootScope){
     //set window innerwidth at page load
@@ -37,7 +43,6 @@ function SetResponsiveWindow($window, $rootScope){
     });
 }
 
-
 function MakeResponsive($rootScope){
     if (window.innerWidth <= 720){
         $rootScope.isResponsive = true;
@@ -46,11 +51,15 @@ function MakeResponsive($rootScope){
     }
 }
 
+//----------------------------------EXPAND NAV WHILE RESPONSIVE--------------------------------------\\
+
 function ClickRegister($scope){
     $scope.open_nav = function(){
         $scope.isNative = !$scope.isNative;
     }
 }
+
+//-----------------------------EXPAND ANIMATION CONTROLLER PROPERTIES--------------------------------\\
 
 function Expand($scope, $element){
     var el_controller = $element;
@@ -67,6 +76,8 @@ function Expand($scope, $element){
             .removeClass('layer_b_expanded');
     };
 }
+
+//------------------------------------SET PORTFOLIO PROPERTIES---------------------------------------\\
 
 function PH($scope, $element){
     var el = $element;
@@ -88,3 +99,49 @@ function PH($scope, $element){
         addClass('pi_inner_banner_'+v+'');
     };
 }
+
+//--------------------------------------SET BANNER PROPERTIES----------------------------------------\\
+
+function SetBannerHTML($scope, $compile, $element, _HTML){
+    _HTML.then(function(data){ 
+        $scope.data = data;
+        
+        var el = $element[0];
+        var appender = $compile($scope.data)($scope);
+        el.append(appender[0]);
+    });
+}
+
+//-------------------------------------SET SHOWCASE PROPERTIES---------------------------------------\\
+
+function SetShowcaseLength(){
+    return 5;
+}
+
+function ShowcaseURL(){
+    return 'showcase.pug';
+}
+
+function IsXL(){
+    return true;
+}
+
+function Subtitle_collection(){
+    return ['', 'Innovation', 'Clean Code', 'Great Service', 'Using the latest techniques'];
+}
+
+//-------------------------------------SET FEEDBACK PROPERTIES---------------------------------------\\
+
+function SetFeedbackLength(){
+    return 4;
+}
+
+function FeedbackURL(){
+    return 'feedback.pug';
+}
+
+//-----------------------------------------FOR LATER USE---------------------------------------------\\
+
+/*function ColourCollection(){
+    return ['color:#d86c56;', 'color:#3d4154;', 'color:white;'];
+}*/

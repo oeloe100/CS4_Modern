@@ -28,7 +28,7 @@ app.get('/', function(req, res, next){
         about  : 'About',
         blog  : 'Blog',
     }, function(err){
-        HandleERR(err, next);
+        HandleERR(err, res, next);
     }));
 });
 
@@ -47,13 +47,14 @@ function SendFile(res, url, next, fileName){
     };
     
     res.sendFile(fileName, options, function(err){
-        HandleERR(err, next);
+        HandleERR(err, res, next);
     });
 }
 
-function HandleERR(err, next){
+function HandleERR(err, res, next){
     if (err){
-        next(err);
+        console.log(err);
+        res.status(err.status).end();
     }else{
         return;
     }
@@ -73,12 +74,6 @@ app.use(stylus.middleware({
 app.use('/static', express.static(__dirname + '/public/static'));
 
 //===================================================================================================\\
-
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end();
-});
 
 app.listen(port);
 

@@ -15,16 +15,16 @@ function ScrollController($scope, $location, $anchorScroll){
 //-----------------------------------------ABOUT CONTROLLER------------------------------------------\\
 
 function AboutController($scope){
-    $scope.title = "About"
-    $scope.about_welcome_class = "about_title"
+    $scope.about_welcome_class = "about_title";
+    $scope.title = "About";
 }
 
 //-----------------------------------------HOME CONTROLLER-------------------------------------------\\
 
 function HomeController($scope){
     $scope.placeHolder = pc;
-    $scope.shorty = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.";
     $scope.title_model_class = 'welcome_center';
+    $scope.shorty = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.";
 }
 
 //---------------------------------SWITCH MOBILE/TABLET > DESKTOP------------------------------------\\

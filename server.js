@@ -1,16 +1,18 @@
+
+var express = require('express');
+var router = express.Router();
+var app = express();
+
 var stylus = require('stylus');
 var nib = require('nib');
 var pug = require('pug');
 
 var path = require('path');
 var join = path.join;
+
 var fs = require('fs');
-
-var express = require('express');
-var router = express.Router();
-var app = express();
-
 var http = require('http');
+
 //var hostname = 'localhost';
 //var port = 3000;
 var port = process.env.PORT || 8080;

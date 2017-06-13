@@ -2,12 +2,6 @@
 //----BASE URL TO TEMPLATE----\\
 var template_base = '/static/html/dir-html/';
 
-//----------------------------------------PLACEHOLDER------------------------------------------------\\
-
-var pc = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,sem. Nulla consequat massa quis enim.';
-
-var pc_short = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.';
-
 //----------------------------------CACHE MODULE TO VARIABLE-----------------------------------------\\
 
 var app = angular.module("Modern_Template", ["ngRoute"]);
@@ -28,7 +22,6 @@ app.config(['$routeProvider', function($routeProvider){
     .when('/about', {
         templateUrl : 'static/html/about.pug', 
         controller : 'about_controller'
-        
     })
 }]);
 
@@ -59,8 +52,8 @@ app.controller('about_controller', function($scope){
 
 //---------------------------------------HOME CONTROLLER---------------------------------------------\\
 
-app.controller('home_controller', function($scope, $document){  
-    HomeController($scope);
+app.controller('home_controller', function($scope, $document, _PC){  
+    HomeController($scope, _PC);
     $scope.$on('directive.SB', function(item, index){
         $scope.active = index;
     });
@@ -120,7 +113,6 @@ app.directive("showcase", function($compile){
             active : '=?bind',
         },
         link : function($scope, $element){                                 
-            $scope.element_desc = pc; 
             $scope.about = template_base + ShowcaseURL();
             $scope.sub_title = Subtitle_collection();
             
@@ -146,6 +138,21 @@ app.controller('banner_controller', function($scope, $compile, $element, _HTML){
     SetBannerHTML($scope, $compile, $element, _HTML);
 });
 
+//--------------------------------------TEXT PLACEHOLDER---------------------------------------------\\
+
+app.factory('_PC', function($http, $q){
+    return promise = $http.get('/pc').then(function(resp){
+        return resp.data;
+    }) 
+});
+
+app.controller('pc_controller', function($scope, _PC){
+    _PC.then(function(data){ 
+        $scope.pc_ = data;
+        $scope.pc_short = data.split('.,')[0];
+    }); 
+});
+
 //--------------------------------------TOOLBOX SHOWCASE---------------------------------------------\\
 
 
@@ -159,7 +166,6 @@ app.directive("feedback", function($compile){
         restrict : 'AECM',
         template : outer,
         link : function($scope, $element){
-            $scope.comment = pc;
             $scope.feedback = template_base + FeedbackURL();
             
             $scope.array = [];

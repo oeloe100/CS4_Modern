@@ -21,10 +21,8 @@ function AboutController($scope){
 
 //-----------------------------------------HOME CONTROLLER-------------------------------------------\\
 
-function HomeController($scope){
-    $scope.placeHolder = pc;
+function HomeController($scope, _PC){
     $scope.title_model_class = 'welcome_center';
-    $scope.shorty = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula egetdolor. Aenean massa.";
 }
 
 //---------------------------------SWITCH MOBILE/TABLET > DESKTOP------------------------------------\\

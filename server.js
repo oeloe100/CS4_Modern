@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 
-const mongoose = require('mongoose'), Admin = mongoose.mongo.Admin;
+//const mongoose = require('mongoose'), Admin = mongoose.mongo.Admin;
 
 const stylus = require('stylus');
 const nib = require('nib');
@@ -98,6 +98,14 @@ app.get('/', function(req, res, next){
     }, function(err){
         HandleERR(err, res, next);
     }));
+});
+
+//===================================================================================================\\
+
+var year = new Date();
+
+app.get('/date', function(req, res, next){
+    res.send((year).toString());
 });
 
 //===================================================================================================\\

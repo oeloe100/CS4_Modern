@@ -155,7 +155,19 @@ app.controller('pc_controller', function($scope, _PC){
 
 //--------------------------------------TOOLBOX SHOWCASE---------------------------------------------\\
 
+//-----------------------------------------SET DATE--------------------------------------------------\\
 
+app.factory('_DATE', function($http, $q){
+     return promise = new $http.get('/date').then(function(resp){
+        return resp.data; 
+     });
+});
+
+app.controller('date_controller', function($scope, _DATE){
+    _DATE.then(function(data){
+        $scope.date_ = data;
+    });
+});
 
 //---------------------------------------FEEDBACK DIR------------------------------------------------\\
 
